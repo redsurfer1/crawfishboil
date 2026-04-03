@@ -1,8 +1,8 @@
 import React from 'react';
 
 export default function Hero() {
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToJoin = () => {
+    document.getElementById('join')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const scrollToHost = () => {
@@ -47,13 +47,13 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              onClick={scrollToContact}
+              onClick={scrollToJoin}
               className="text-white px-8 py-4 rounded-full text-lg font-semibold transition transform hover:scale-105 shadow-lg"
               style={{ backgroundColor: '#5B3F95' }}
               onMouseEnter={(e) => e.target.style.backgroundColor = '#4a3277'}
               onMouseLeave={(e) => e.target.style.backgroundColor = '#5B3F95'}
             >
-              Contact Us
+              Join a Boil
             </button>
             <button
               onClick={scrollToHost}
