@@ -46,10 +46,10 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full sm:w-auto">
               <button
                 onClick={scrollToJoin}
-                className="text-white px-8 py-4 rounded-full text-lg font-semibold transition transform hover:scale-105 shadow-lg"
+                className="flex-1 sm:flex-initial sm:min-w-[220px] text-white px-8 py-4 rounded-full text-lg font-semibold transition transform hover:scale-105 shadow-lg text-center"
                 style={{ backgroundColor: '#5B3F95' }}
                 onMouseEnter={(e) => e.target.style.backgroundColor = '#4a3277'}
                 onMouseLeave={(e) => e.target.style.backgroundColor = '#5B3F95'}
@@ -58,7 +58,7 @@ export default function Hero() {
               </button>
               <button
                 onClick={scrollToHost}
-                className="bg-white hover:bg-gray-50 px-8 py-4 rounded-full text-lg font-semibold transition transform hover:scale-105 shadow-lg border-2"
+                className="flex-1 sm:flex-initial sm:min-w-[220px] bg-white hover:bg-gray-50 px-8 py-4 rounded-full text-lg font-semibold transition transform hover:scale-105 shadow-lg border-2 text-center"
                 style={{ color: '#0088CE', borderColor: '#0088CE' }}
               >
                 Host Your Own Boil
