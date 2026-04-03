@@ -18,7 +18,7 @@ export default function Header() {
               onClick={() => scrollToSection('join')}
               className="text-gray-700 hover:text-red-600 font-medium transition"
             >
-              Join a Boil
+              Attend a Boil
             </button>
             <button
               onClick={() => scrollToSection('host')}

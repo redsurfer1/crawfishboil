@@ -33,7 +33,7 @@ export default function Hero() {
 
             <div className="mb-8">
               <p className="text-lg md:text-xl text-gray-700 mb-4">
-                Join authentic Southern crawfish boils in your area, or host your own
+                Attend authentic Southern crawfish boils in your area, or host your own
                 legendary backyard feast with our planning tools.
               </p>
               <div className="space-y-2">
@@ -54,7 +54,7 @@ export default function Hero() {
                 onMouseEnter={(e) => e.target.style.backgroundColor = '#4a3277'}
                 onMouseLeave={(e) => e.target.style.backgroundColor = '#5B3F95'}
               >
-                Join a Boil
+                Attend a Boil
               </button>
               <button
                 onClick={scrollToHost}

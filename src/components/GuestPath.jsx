@@ -85,7 +85,7 @@ export default function GuestPath() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Join a Boil
+            Attend a Boil
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-3">
             Experience authentic Louisiana-style crawfish boils with great food and even better company
@@ -96,10 +96,10 @@ export default function GuestPath() {
         </div>
 
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="bg-green-50 p-8 rounded-xl shadow-lg h-full">
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
+            <div className="bg-green-50 p-8 rounded-xl shadow-lg flex flex-col">
               <h3 className="font-bold text-2xl text-gray-900 mb-6">What to Expect</h3>
-              <ul className="space-y-6">
+              <ul className="space-y-6 flex-1 flex flex-col justify-between">
                 <li className="flex items-start">
                   <span className="text-red-600 mr-4 text-2xl">🦞</span>
                   <div>
