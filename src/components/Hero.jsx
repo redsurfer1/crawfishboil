@@ -33,7 +33,7 @@ export default function Hero() {
 
             <div className="mb-8">
               <p className="text-lg md:text-xl text-gray-700 mb-4">
-                Attend an authentic Southern crawfish boil; or if you're interested in hosting your own legendary backyard feast, check out our planning tools.
+                Attend an authentic crawfish boil; or if you're interested in hosting your own legendary backyard feast, check out our planning tools.
               </p>
               <div className="space-y-2">
                 <p className="text-base font-semibold" style={{ color: '#5B3F95' }}>

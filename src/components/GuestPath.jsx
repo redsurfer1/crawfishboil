@@ -88,7 +88,7 @@ export default function GuestPath() {
             Attend a Boil
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-3">
-            Experience authentic Louisiana-style crawfish boils with great food and even better company
+            Experience an authentic crawfish boil with great food and even better company
           </p>
           <p className="text-lg font-semibold" style={{ color: '#0088CE' }}>
             Featuring an authentic Spice Krewe seasoning recipe
