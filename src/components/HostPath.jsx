@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import Calculator from './Calculator';
+import CookingConverter from './CookingConverter';
 
 export default function HostPath() {
+  const [activeTab, setActiveTab] = useState('calculator');
+
   return (
     <section id="host" className="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,7 +41,34 @@ export default function HostPath() {
           </div>
         </div>
 
-        <Calculator />
+        {/* Tab Navigation */}
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex bg-white rounded-lg shadow-md p-1">
+            <button
+              onClick={() => setActiveTab('calculator')}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all ${
+                activeTab === 'calculator'
+                  ? 'bg-purple-600 text-white shadow-md'
+                  : 'text-gray-700 hover:bg-gray-100'
+              }`}
+            >
+              Crawfish Calculator
+            </button>
+            <button
+              onClick={() => setActiveTab('converter')}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all ${
+                activeTab === 'converter'
+                  ? 'bg-purple-600 text-white shadow-md'
+                  : 'text-gray-700 hover:bg-gray-100'
+              }`}
+            >
+              Cooking Converter
+            </button>
+          </div>
+        </div>
+
+        {/* Tab Content */}
+        {activeTab === 'calculator' ? <Calculator /> : <CookingConverter />}
       </div>
     </section>
   );
