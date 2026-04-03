@@ -97,99 +97,107 @@ export default function GuestPath() {
 
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="space-y-6">
-              <div className="bg-green-50 p-6 rounded-xl shadow-lg">
-                <h3 className="font-bold text-xl text-gray-900 mb-4">What to Expect</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-red-600 mr-3 text-xl">🦞</span>
-                    <span className="text-gray-700">Fresh, perfectly seasoned crawfish</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-600 mr-3 text-xl">🌽</span>
-                    <span className="text-gray-700">Traditional sides: corn, potatoes, sausage</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-600 mr-3 text-xl">🎉</span>
-                    <span className="text-gray-700">Fun, festive outdoor atmosphere</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-red-600 mr-3 text-xl">👥</span>
-                    <span className="text-gray-700">Meet neighbors and make new friends</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-green-50 p-6 rounded-xl shadow-lg">
-                <h4 className="text-lg font-bold text-gray-900 mb-4">Select Your Plate</h4>
-                <div className="space-y-4">
-                  <div className="bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-red-300 transition">
-                    <div className="flex justify-between items-start mb-2">
-                      <div className="flex-1">
-                        <h5 className="font-bold text-gray-900">Crawfish + Sides</h5>
-                        <p className="text-sm text-gray-600 mt-1">Full crawfish boil experience with all the traditional sides</p>
-                      </div>
-                      <span className="text-xl font-bold text-red-600 ml-4">$25</span>
-                    </div>
-                    <div className="flex items-center gap-3 mt-3">
-                      <button
-                        type="button"
-                        onClick={() => updateCart('crawfishPlate', false)}
-                        className="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-lg font-bold text-gray-700 transition"
-                      >
-                        -
-                      </button>
-                      <span className="w-12 text-center font-semibold text-gray-900">{cart.crawfishPlate}</span>
-                      <button
-                        type="button"
-                        onClick={() => updateCart('crawfishPlate', true)}
-                        className="w-10 h-10 flex items-center justify-center rounded-lg font-bold text-white transition"
-                        style={{ backgroundColor: '#5B3F95' }}
-                        onMouseEnter={(e) => e.target.style.backgroundColor = '#4a3277'}
-                        onMouseLeave={(e) => e.target.style.backgroundColor = '#5B3F95'}
-                      >
-                        +
-                      </button>
-                    </div>
+            <div className="bg-green-50 p-8 rounded-xl shadow-lg h-full">
+              <h3 className="font-bold text-2xl text-gray-900 mb-6">What to Expect</h3>
+              <ul className="space-y-6">
+                <li className="flex items-start">
+                  <span className="text-red-600 mr-4 text-2xl">🦞</span>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-1">Fresh, Perfectly Seasoned Crawfish</h4>
+                    <p className="text-gray-700 leading-relaxed">Premium Louisiana crawfish boiled to perfection using our signature Spice Krewe seasoning recipe. Each batch is carefully prepared to deliver that authentic Cajun flavor you'll crave all year long.</p>
                   </div>
-
-                  <div className="bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-red-300 transition">
-                    <div className="flex justify-between items-start mb-2">
-                      <div className="flex-1">
-                        <h5 className="font-bold text-gray-900">Sides Only</h5>
-                        <p className="text-sm text-gray-600 mt-1">Corn, potatoes, sausage, and onions for those skipping the mudbugs</p>
-                      </div>
-                      <span className="text-xl font-bold text-red-600 ml-4">$12</span>
-                    </div>
-                    <div className="flex items-center gap-3 mt-3">
-                      <button
-                        type="button"
-                        onClick={() => updateCart('sidesOnly', false)}
-                        className="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-lg font-bold text-gray-700 transition"
-                      >
-                        -
-                      </button>
-                      <span className="w-12 text-center font-semibold text-gray-900">{cart.sidesOnly}</span>
-                      <button
-                        type="button"
-                        onClick={() => updateCart('sidesOnly', true)}
-                        className="w-10 h-10 flex items-center justify-center rounded-lg font-bold text-white transition"
-                        style={{ backgroundColor: '#5B3F95' }}
-                        onMouseEnter={(e) => e.target.style.backgroundColor = '#4a3277'}
-                        onMouseLeave={(e) => e.target.style.backgroundColor = '#5B3F95'}
-                      >
-                        +
-                      </button>
-                    </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-600 mr-4 text-2xl">🌽</span>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-1">Traditional Sides</h4>
+                    <p className="text-gray-700 leading-relaxed">Every plate comes loaded with sweet corn on the cob, tender red potatoes, savory Andouille sausage, and perfectly seasoned onions. All the classic fixings you need for an authentic boil experience.</p>
                   </div>
-                </div>
-              </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-600 mr-4 text-2xl">🎉</span>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-1">Fun, Festive Outdoor Atmosphere</h4>
+                    <p className="text-gray-700 leading-relaxed">Enjoy your meal in a relaxed outdoor setting with great music, cold drinks, and that special Louisiana spirit. It's more than just a meal—it's a celebration of good food and good times.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-600 mr-4 text-2xl">👥</span>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-1">Meet Neighbors & Make New Friends</h4>
+                    <p className="text-gray-700 leading-relaxed">Our crawfish boils bring the community together. Whether you're a seasoned pro or trying crawfish for the first time, you'll find yourself surrounded by friendly faces and Southern hospitality.</p>
+                  </div>
+                </li>
+              </ul>
             </div>
 
             <div className="bg-green-50 p-8 rounded-xl shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Sign Up to Attend
               </h3>
+
+              <h4 className="text-lg font-bold text-gray-900 mb-4">Select Your Plate</h4>
+              <div className="space-y-4 mb-6">
+                <div className="bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-red-300 transition">
+                  <div className="flex justify-between items-start mb-2">
+                    <div className="flex-1">
+                      <h5 className="font-bold text-gray-900">Crawfish + Sides</h5>
+                      <p className="text-sm text-gray-600 mt-1">Full crawfish boil experience with all the traditional sides</p>
+                    </div>
+                    <span className="text-xl font-bold text-red-600 ml-4">$25</span>
+                  </div>
+                  <div className="flex items-center gap-3 mt-3">
+                    <button
+                      type="button"
+                      onClick={() => updateCart('crawfishPlate', false)}
+                      className="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-lg font-bold text-gray-700 transition"
+                    >
+                      -
+                    </button>
+                    <span className="w-12 text-center font-semibold text-gray-900">{cart.crawfishPlate}</span>
+                    <button
+                      type="button"
+                      onClick={() => updateCart('crawfishPlate', true)}
+                      className="w-10 h-10 flex items-center justify-center rounded-lg font-bold text-white transition"
+                      style={{ backgroundColor: '#5B3F95' }}
+                      onMouseEnter={(e) => e.target.style.backgroundColor = '#4a3277'}
+                      onMouseLeave={(e) => e.target.style.backgroundColor = '#5B3F95'}
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+
+                <div className="bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-red-300 transition">
+                  <div className="flex justify-between items-start mb-2">
+                    <div className="flex-1">
+                      <h5 className="font-bold text-gray-900">Sides Only</h5>
+                      <p className="text-sm text-gray-600 mt-1">Corn, potatoes, sausage, and onions for those skipping the mudbugs</p>
+                    </div>
+                    <span className="text-xl font-bold text-red-600 ml-4">$12</span>
+                  </div>
+                  <div className="flex items-center gap-3 mt-3">
+                    <button
+                      type="button"
+                      onClick={() => updateCart('sidesOnly', false)}
+                      className="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-lg font-bold text-gray-700 transition"
+                    >
+                      -
+                    </button>
+                    <span className="w-12 text-center font-semibold text-gray-900">{cart.sidesOnly}</span>
+                    <button
+                      type="button"
+                      onClick={() => updateCart('sidesOnly', true)}
+                      className="w-10 h-10 flex items-center justify-center rounded-lg font-bold text-white transition"
+                      style={{ backgroundColor: '#5B3F95' }}
+                      onMouseEnter={(e) => e.target.style.backgroundColor = '#4a3277'}
+                      onMouseLeave={(e) => e.target.style.backgroundColor = '#5B3F95'}
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
 
               <div className="space-y-3">
                 <button
