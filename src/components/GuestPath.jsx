@@ -104,21 +104,21 @@ export default function GuestPath() {
                   <span className="text-red-600 mr-4 text-2xl">🦞</span>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-1">Fresh, Perfectly Seasoned Crawfish</h4>
-                    <p className="text-gray-700 leading-relaxed">Premium Louisiana crawfish boiled to perfection using our signature Spice Krewe seasoning recipe. Each batch is carefully prepared to deliver that authentic Cajun flavor you'll crave all year long.</p>
+                    <p className="text-gray-700 leading-relaxed">Premium Louisiana crawfish boiled to perfection using Spice Krewe's signature seasoning recipe. Each batch is carefully prepared to deliver that authentic Cajun flavor you'll crave all year long.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-red-600 mr-4 text-2xl">🌽</span>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-1">Traditional Sides</h4>
-                    <p className="text-gray-700 leading-relaxed">Every plate comes loaded with sweet corn on the cob, tender red potatoes, savory Andouille sausage, and perfectly seasoned onions. All the classic fixings you need for an authentic boil experience.</p>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-1">Tasty Sides</h4>
+                    <p className="text-gray-700 leading-relaxed">corn on the cob, potatoes, sausage, brussels sprouts and perfectly seasoned garlic and onions. All the fixings for an authentic boil experience.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-red-600 mr-4 text-2xl">🎉</span>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-1">Fun, Festive Outdoor Atmosphere</h4>
-                    <p className="text-gray-700 leading-relaxed">Enjoy your meal in a relaxed outdoor setting with great music, cold drinks, and that special Louisiana spirit. It's more than just a meal—it's a celebration of good food and good times.</p>
+                    <p className="text-gray-700 leading-relaxed">Enjoy your meal in a relaxed outdoor setting with great music, cold drinks, and that special Memphis spirit. It's more than just a meal—it's a celebration of good food and good times.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
