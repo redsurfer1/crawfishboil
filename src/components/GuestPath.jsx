@@ -50,6 +50,10 @@ export default function GuestPath() {
     }
   };
 
+  const handlePayNow = () => {
+    window.open('https://www.paypal.com/paypalme/yourpaypalaccount', '_blank');
+  };
+
   return (
     <section id="join" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,33 +66,9 @@ export default function GuestPath() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div className="space-y-6">
-            <div className="rounded-2xl overflow-hidden shadow-xl">
-              <img
-                src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&auto=format&fit=crop&q=80"
-                alt="Steaming crawfish boil spread with corn and potatoes"
-                className="w-full h-64 object-cover"
-              />
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1542838309-e6f3b6e3384e?w=400&auto=format&fit=crop&q=80"
-                  alt="Large outdoor boiling pot with crawfish"
-                  className="w-full h-48 object-cover"
-                />
-              </div>
-              <div className="rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1529543544-8-e00e9ff79c2?w=400&auto=format&fit=crop&q=80"
-                  alt="Diverse group enjoying crawfish at backyard gathering"
-                  className="w-full h-48 object-cover"
-                />
-              </div>
-            </div>
-
-            <div className="bg-orange-50 p-6 rounded-xl">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div className="bg-orange-50 p-6 rounded-xl shadow-lg">
               <h3 className="font-bold text-xl text-gray-900 mb-4">What to Expect</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
@@ -109,9 +89,8 @@ export default function GuestPath() {
                 </li>
               </ul>
             </div>
-          </div>
 
-          <div className="bg-gray-50 p-8 rounded-2xl shadow-xl">
+            <div className="bg-gray-50 p-8 rounded-2xl shadow-xl">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               Sign Up to Attend
             </h3>
@@ -200,7 +179,21 @@ export default function GuestPath() {
                 {loading ? 'Submitting...' : 'Reserve Your Spot'}
               </button>
             </form>
+
+            <div className="mt-4">
+              <button
+                type="button"
+                onClick={handlePayNow}
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-semibold text-lg transition transform hover:scale-105 flex items-center justify-center gap-2"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                </svg>
+                Pay Now with PayPal
+              </button>
+            </div>
           </div>
+        </div>
         </div>
       </div>
     </section>
