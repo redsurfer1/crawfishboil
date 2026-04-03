@@ -13,7 +13,8 @@ export default function GuestPath() {
   const [showContactModal, setShowContactModal] = useState(false);
   const [cart, setCart] = useState({
     crawfishPlate: 0,
-    sidesOnly: 0
+    sidesOnly: 0,
+    drinkCooler: 0
   });
 
   const handleChange = (e) => {
@@ -63,7 +64,7 @@ export default function GuestPath() {
   };
 
   const calculateTotal = () => {
-    return (cart.crawfishPlate * 25) + (cart.sidesOnly * 12);
+    return (cart.crawfishPlate * 25) + (cart.sidesOnly * 12) + (cart.drinkCooler * 5);
   };
 
   const handlePayNow = () => {
@@ -188,6 +189,36 @@ export default function GuestPath() {
                     <button
                       type="button"
                       onClick={() => updateCart('sidesOnly', true)}
+                      className="w-10 h-10 flex items-center justify-center rounded-lg font-bold text-white transition"
+                      style={{ backgroundColor: '#5B3F95' }}
+                      onMouseEnter={(e) => e.target.style.backgroundColor = '#4a3277'}
+                      onMouseLeave={(e) => e.target.style.backgroundColor = '#5B3F95'}
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+
+                <div className="bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-red-300 transition">
+                  <div className="flex justify-between items-start mb-2">
+                    <div className="flex-1">
+                      <h5 className="font-bold text-gray-900">Drink Cooler Access</h5>
+                      <p className="text-sm text-gray-600 mt-1">Flat fee for unlimited access to the communal drink cooler. (Note: This is a one-time access fee, not a charge per drink).</p>
+                    </div>
+                    <span className="text-xl font-bold text-red-600 ml-4">$5</span>
+                  </div>
+                  <div className="flex items-center gap-3 mt-3">
+                    <button
+                      type="button"
+                      onClick={() => updateCart('drinkCooler', false)}
+                      className="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-lg font-bold text-gray-700 transition"
+                    >
+                      -
+                    </button>
+                    <span className="w-12 text-center font-semibold text-gray-900">{cart.drinkCooler}</span>
+                    <button
+                      type="button"
+                      onClick={() => updateCart('drinkCooler', true)}
                       className="w-10 h-10 flex items-center justify-center rounded-lg font-bold text-white transition"
                       style={{ backgroundColor: '#5B3F95' }}
                       onMouseEnter={(e) => e.target.style.backgroundColor = '#4a3277'}
