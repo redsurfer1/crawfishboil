@@ -73,10 +73,10 @@ export default function GuestPath() {
     }
   };
 
-  const handleContactUs = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+  const handleVenmoPay = () => {
+    const total = calculateTotal();
+    if (total > 0) {
+      window.open('https://venmo.com/u/yourvenmohandle', '_blank');
     }
   };
 
@@ -121,93 +121,7 @@ export default function GuestPath() {
               Sign Up to Attend
             </h3>
 
-            {message.text && (
-              <div className={`mb-6 p-4 rounded-lg ${
-                message.type === 'success'
-                  ? 'bg-green-50 text-green-800 border border-green-200'
-                  : 'bg-red-50 text-red-800 border border-red-200'
-              }`}>
-                {message.text}
-              </div>
-            )}
-
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition"
-                  placeholder="John Doe"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition"
-                  placeholder="john@example.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition"
-                  placeholder="(555) 123-4567"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="guests" className="block text-sm font-semibold text-gray-700 mb-2">
-                  Number of Guests
-                </label>
-                <select
-                  id="guests"
-                  name="guests"
-                  value={formData.guests}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition"
-                >
-                  {[1, 2, 3, 4, 5, 6, 7, 8].map(num => (
-                    <option key={num} value={num}>{num}</option>
-                  ))}
-                </select>
-              </div>
-
-              <button
-                type="button"
-                onClick={handleContactUs}
-                className="w-full bg-red-600 hover:bg-red-700 text-white py-4 rounded-lg font-semibold text-lg transition transform hover:scale-105"
-              >
-                Contact Us
-              </button>
-            </form>
-
-            <div className="mt-8 pt-8 border-t border-gray-200">
-              <h4 className="text-lg font-bold text-gray-900 mb-4">Select Your Plate</h4>
+            <h4 className="text-lg font-bold text-gray-900 mb-4">Select Your Plate</h4>
 
               <div className="space-y-4 mb-6">
                 <div className="bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-red-300 transition">
@@ -265,20 +179,36 @@ export default function GuestPath() {
                 </div>
               </div>
 
-              <button
-                type="button"
-                onClick={handlePayNow}
-                disabled={calculateTotal() === 0}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-semibold text-lg transition transform hover:scale-105 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                </svg>
-                Pay Now with PayPal {calculateTotal() > 0 && `- $${calculateTotal()}`}
-              </button>
+              <div className="space-y-3">
+                <button
+                  type="button"
+                  onClick={handlePayNow}
+                  disabled={calculateTotal() === 0}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-semibold text-lg transition transform hover:scale-105 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                  </svg>
+                  Pay Now with PayPal {calculateTotal() > 0 && `- $${calculateTotal()}`}
+                </button>
+
+                <button
+                  type="button"
+                  onClick={handleVenmoPay}
+                  disabled={calculateTotal() === 0}
+                  className="w-full text-white py-4 rounded-lg font-semibold text-lg transition transform hover:scale-105 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  style={{ backgroundColor: '#3d95ce' }}
+                  onMouseEnter={(e) => e.target.style.backgroundColor = '#2d85be'}
+                  onMouseLeave={(e) => e.target.style.backgroundColor = '#3d95ce'}
+                >
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.5 4h-15C3.67 4 3 4.67 3 5.5v13c0 .83.67 1.5 1.5 1.5h15c.83 0 1.5-.67 1.5-1.5v-13c0-.83-.67-1.5-1.5-1.5zM12 16.5c-2.48 0-4.5-2.02-4.5-4.5s2.02-4.5 4.5-4.5 4.5 2.02 4.5 4.5-2.02 4.5-4.5 4.5zm0-7.5c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                  </svg>
+                  Pay with Venmo {calculateTotal() > 0 && `- $${calculateTotal()}`}
+                </button>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </section>
