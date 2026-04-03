@@ -87,8 +87,11 @@ export default function GuestPath() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Join a Boil
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-3">
             Experience authentic Louisiana-style crawfish boils with great food and even better company
+          </p>
+          <p className="text-lg font-semibold" style={{ color: '#0088CE' }}>
+            Featuring an authentic Spice Krewe seasoning recipe
           </p>
         </div>
 
@@ -144,7 +147,10 @@ export default function GuestPath() {
                     <button
                       type="button"
                       onClick={() => updateCart('crawfishPlate', true)}
-                      className="w-10 h-10 flex items-center justify-center bg-red-600 hover:bg-red-700 rounded-lg font-bold text-white transition"
+                      className="w-10 h-10 flex items-center justify-center rounded-lg font-bold text-white transition"
+                      style={{ backgroundColor: '#5B3F95' }}
+                      onMouseEnter={(e) => e.target.style.backgroundColor = '#4a3277'}
+                      onMouseLeave={(e) => e.target.style.backgroundColor = '#5B3F95'}
                     >
                       +
                     </button>
@@ -171,7 +177,10 @@ export default function GuestPath() {
                     <button
                       type="button"
                       onClick={() => updateCart('sidesOnly', true)}
-                      className="w-10 h-10 flex items-center justify-center bg-red-600 hover:bg-red-700 rounded-lg font-bold text-white transition"
+                      className="w-10 h-10 flex items-center justify-center rounded-lg font-bold text-white transition"
+                      style={{ backgroundColor: '#5B3F95' }}
+                      onMouseEnter={(e) => e.target.style.backgroundColor = '#4a3277'}
+                      onMouseLeave={(e) => e.target.style.backgroundColor = '#5B3F95'}
                     >
                       +
                     </button>

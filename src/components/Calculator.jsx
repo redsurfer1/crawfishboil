@@ -249,9 +249,9 @@ ${calcMode === 'people' ? `For ${people} people` : `For ${crawfishPounds} lbs of
               </div>
             </div>
 
-            <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+            <div className="mt-6 p-4 rounded-lg" style={{ backgroundColor: '#E8E0F5' }}>
               <p className="text-sm text-gray-600">
-                <span className="font-semibold text-gray-900">Pro Tip:</span> These ratios are based on traditional Louisiana crawfish boil proportions. Adjust to taste and consider buying extra crawfish for hungry crowds!
+                <span className="font-semibold text-gray-900">Pro Tip:</span> These ratios are based on traditional Louisiana crawfish boil proportions. The 4 oz seasoning per 9 lbs crawfish ratio is specifically optimized for <span className="font-semibold" style={{ color: '#5B3F95' }}>Spice Krewe Crawfish Boil Seasoning</span>. Adjust to taste and consider buying extra crawfish for hungry crowds!
               </p>
             </div>
           </div>
