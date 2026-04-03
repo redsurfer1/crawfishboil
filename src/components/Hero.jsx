@@ -67,12 +67,35 @@ export default function Hero() {
           </div>
 
           <div className="hidden lg:block">
-            <div className="rounded-3xl overflow-hidden shadow-2xl bg-green-50 border-4 border-white">
-              <img
-                src="https://images.pexels.com/photos/6419121/pexels-photo-6419121.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Traditional outdoor crawfish boil with steaming crawfish, corn, potatoes, and sausage"
-                className="w-full h-full object-cover"
-              />
+            <div className="grid grid-cols-2 gap-4 rounded-3xl p-4 bg-green-50 shadow-2xl border-4 border-white">
+              <div className="rounded-2xl overflow-hidden shadow-lg aspect-square">
+                <img
+                  src="/IMG_1426_Crawfish_Hello.jpg"
+                  alt="Close-up of a massive raw red crawfish being held by hand"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-lg aspect-square">
+                <img
+                  src="/IMG_1413_Crawfish_Drain.jpg"
+                  alt="Silver seafood boil basket overflowing with bright red crawfish and yellow corn"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-lg aspect-square">
+                <img
+                  src="/IMG_1408_Boil_1.jpg"
+                  alt="Steaming crawfish and onions in murky spiced boil liquor"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-lg aspect-square">
+                <img
+                  src="/IMG_1425_Crawfish_Plate.jpg"
+                  alt="Brown paper boat with red crawfish, yellow potato, and sausage"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
