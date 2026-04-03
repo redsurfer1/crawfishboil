@@ -35,7 +35,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div>
+          <div id="contact">
             <h4 className="font-bold text-lg mb-4">Contact</h4>
             <p className="text-gray-400">
               Questions? Reach out at<br />
