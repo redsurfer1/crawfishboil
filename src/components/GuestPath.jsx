@@ -66,23 +66,23 @@ export default function GuestPath() {
           <div className="space-y-6">
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1559311042-ce9bb8ba4915?w=800&auto=format&fit=crop"
-                alt="Fresh boiled crawfish"
+                src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&auto=format&fit=crop&q=80"
+                alt="Steaming crawfish boil spread with corn and potatoes"
                 className="w-full h-64 object-cover"
               />
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&auto=format&fit=crop"
-                  alt="Outdoor crawfish boil"
+                  src="https://images.unsplash.com/photo-1542838309-e6f3b6e3384e?w=400&auto=format&fit=crop&q=80"
+                  alt="Large outdoor boiling pot with crawfish"
                   className="w-full h-48 object-cover"
                 />
               </div>
               <div className="rounded-xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&auto=format&fit=crop"
-                  alt="People enjoying food together"
+                  src="https://images.unsplash.com/photo-1529543544-8-e00e9ff79c2?w=400&auto=format&fit=crop&q=80"
+                  alt="Diverse group enjoying crawfish at backyard gathering"
                   className="w-full h-48 object-cover"
                 />
               </div>
