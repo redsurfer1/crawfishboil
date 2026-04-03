@@ -95,98 +95,101 @@ export default function GuestPath() {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="bg-orange-50 p-6 rounded-xl shadow-lg">
-              <h3 className="font-bold text-xl text-gray-900 mb-4">What to Expect</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="text-red-600 mr-3 text-xl">🦞</span>
-                  <span className="text-gray-700">Fresh, perfectly seasoned crawfish</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-600 mr-3 text-xl">🌽</span>
-                  <span className="text-gray-700">Traditional sides: corn, potatoes, sausage</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-600 mr-3 text-xl">🎉</span>
-                  <span className="text-gray-700">Fun, festive outdoor atmosphere</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-600 mr-3 text-xl">👥</span>
-                  <span className="text-gray-700">Meet neighbors and make new friends</span>
-                </li>
-              </ul>
-            </div>
+            <div className="space-y-6">
+              <div className="bg-green-50 p-6 rounded-xl shadow-lg">
+                <h3 className="font-bold text-xl text-gray-900 mb-4">What to Expect</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <span className="text-red-600 mr-3 text-xl">🦞</span>
+                    <span className="text-gray-700">Fresh, perfectly seasoned crawfish</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-red-600 mr-3 text-xl">🌽</span>
+                    <span className="text-gray-700">Traditional sides: corn, potatoes, sausage</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-red-600 mr-3 text-xl">🎉</span>
+                    <span className="text-gray-700">Fun, festive outdoor atmosphere</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-red-600 mr-3 text-xl">👥</span>
+                    <span className="text-gray-700">Meet neighbors and make new friends</span>
+                  </li>
+                </ul>
+              </div>
 
-            <div className="bg-gray-50 p-8 rounded-2xl shadow-xl">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Sign Up to Attend
-            </h3>
-
-            <h4 className="text-lg font-bold text-gray-900 mb-4">Select Your Plate</h4>
-
-              <div className="space-y-4 mb-6">
-                <div className="bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-red-300 transition">
-                  <div className="flex justify-between items-start mb-2">
-                    <div className="flex-1">
-                      <h5 className="font-bold text-gray-900">Crawfish + Sides</h5>
-                      <p className="text-sm text-gray-600 mt-1">Full crawfish boil experience with all the traditional sides</p>
+              <div className="bg-green-50 p-6 rounded-xl shadow-lg">
+                <h4 className="text-lg font-bold text-gray-900 mb-4">Select Your Plate</h4>
+                <div className="space-y-4">
+                  <div className="bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-red-300 transition">
+                    <div className="flex justify-between items-start mb-2">
+                      <div className="flex-1">
+                        <h5 className="font-bold text-gray-900">Crawfish + Sides</h5>
+                        <p className="text-sm text-gray-600 mt-1">Full crawfish boil experience with all the traditional sides</p>
+                      </div>
+                      <span className="text-xl font-bold text-red-600 ml-4">$25</span>
                     </div>
-                    <span className="text-xl font-bold text-red-600 ml-4">$25</span>
-                  </div>
-                  <div className="flex items-center gap-3 mt-3">
-                    <button
-                      type="button"
-                      onClick={() => updateCart('crawfishPlate', false)}
-                      className="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-lg font-bold text-gray-700 transition"
-                    >
-                      -
-                    </button>
-                    <span className="w-12 text-center font-semibold text-gray-900">{cart.crawfishPlate}</span>
-                    <button
-                      type="button"
-                      onClick={() => updateCart('crawfishPlate', true)}
-                      className="w-10 h-10 flex items-center justify-center rounded-lg font-bold text-white transition"
-                      style={{ backgroundColor: '#5B3F95' }}
-                      onMouseEnter={(e) => e.target.style.backgroundColor = '#4a3277'}
-                      onMouseLeave={(e) => e.target.style.backgroundColor = '#5B3F95'}
-                    >
-                      +
-                    </button>
-                  </div>
-                </div>
-
-                <div className="bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-red-300 transition">
-                  <div className="flex justify-between items-start mb-2">
-                    <div className="flex-1">
-                      <h5 className="font-bold text-gray-900">Sides Only</h5>
-                      <p className="text-sm text-gray-600 mt-1">Corn, potatoes, sausage, and onions for those skipping the mudbugs</p>
+                    <div className="flex items-center gap-3 mt-3">
+                      <button
+                        type="button"
+                        onClick={() => updateCart('crawfishPlate', false)}
+                        className="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-lg font-bold text-gray-700 transition"
+                      >
+                        -
+                      </button>
+                      <span className="w-12 text-center font-semibold text-gray-900">{cart.crawfishPlate}</span>
+                      <button
+                        type="button"
+                        onClick={() => updateCart('crawfishPlate', true)}
+                        className="w-10 h-10 flex items-center justify-center rounded-lg font-bold text-white transition"
+                        style={{ backgroundColor: '#5B3F95' }}
+                        onMouseEnter={(e) => e.target.style.backgroundColor = '#4a3277'}
+                        onMouseLeave={(e) => e.target.style.backgroundColor = '#5B3F95'}
+                      >
+                        +
+                      </button>
                     </div>
-                    <span className="text-xl font-bold text-red-600 ml-4">$12</span>
                   </div>
-                  <div className="flex items-center gap-3 mt-3">
-                    <button
-                      type="button"
-                      onClick={() => updateCart('sidesOnly', false)}
-                      className="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-lg font-bold text-gray-700 transition"
-                    >
-                      -
-                    </button>
-                    <span className="w-12 text-center font-semibold text-gray-900">{cart.sidesOnly}</span>
-                    <button
-                      type="button"
-                      onClick={() => updateCart('sidesOnly', true)}
-                      className="w-10 h-10 flex items-center justify-center rounded-lg font-bold text-white transition"
-                      style={{ backgroundColor: '#5B3F95' }}
-                      onMouseEnter={(e) => e.target.style.backgroundColor = '#4a3277'}
-                      onMouseLeave={(e) => e.target.style.backgroundColor = '#5B3F95'}
-                    >
-                      +
-                    </button>
+
+                  <div className="bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-red-300 transition">
+                    <div className="flex justify-between items-start mb-2">
+                      <div className="flex-1">
+                        <h5 className="font-bold text-gray-900">Sides Only</h5>
+                        <p className="text-sm text-gray-600 mt-1">Corn, potatoes, sausage, and onions for those skipping the mudbugs</p>
+                      </div>
+                      <span className="text-xl font-bold text-red-600 ml-4">$12</span>
+                    </div>
+                    <div className="flex items-center gap-3 mt-3">
+                      <button
+                        type="button"
+                        onClick={() => updateCart('sidesOnly', false)}
+                        className="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-lg font-bold text-gray-700 transition"
+                      >
+                        -
+                      </button>
+                      <span className="w-12 text-center font-semibold text-gray-900">{cart.sidesOnly}</span>
+                      <button
+                        type="button"
+                        onClick={() => updateCart('sidesOnly', true)}
+                        className="w-10 h-10 flex items-center justify-center rounded-lg font-bold text-white transition"
+                        style={{ backgroundColor: '#5B3F95' }}
+                        onMouseEnter={(e) => e.target.style.backgroundColor = '#4a3277'}
+                        onMouseLeave={(e) => e.target.style.backgroundColor = '#5B3F95'}
+                      >
+                        +
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="bg-green-50 p-8 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Sign Up to Attend
+              </h3>
 
               <div className="space-y-3">
                 <button
