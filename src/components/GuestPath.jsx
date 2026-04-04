@@ -112,7 +112,7 @@ export default function GuestPath() {
                   <span className="text-red-600 mr-4 text-2xl">🌽</span>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-1">Tasty Sides</h4>
-                    <p className="text-gray-700 leading-relaxed">corn on the cob, potatoes, sausage, brussels sprouts and perfectly seasoned garlic and onions. All the fixings for an authentic boil experience.</p>
+                    <p className="text-gray-700 leading-relaxed">Load up on corn on the cob, potatoes, sausage, brussels sprouts and perfectly seasoned garlic and onions. All the fixings for an authentic boil experience.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
