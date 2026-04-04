@@ -1,2 +1,49 @@
+# Dependencies
 node_modules/
+vendor/
+
+# Environment and secrets
 .env
+.env.*
+!.env.example
+wp-config.php
+
+# OS
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Logs and debug
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+php_errorlog
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Build / cache
+.cache/
+dist/
+build/
+*.tmp
+*.temp
+
+# WordPress (optional large / generated)
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backups/
+wp-content/debug.log
+
+# Never commit keys or credentials
+sshkey
+*.pem
+*.key
