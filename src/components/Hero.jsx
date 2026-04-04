@@ -14,20 +14,8 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
-            <div className="flex justify-center lg:justify-start mb-6">
-              <img
-                src="/SpiceKrewe_Logo_Transparent_background_(1).png"
-                alt="Spice Krewe Logo"
-                className="h-24 md:h-32 w-auto"
-              />
-            </div>
-
-            <div className="inline-block mb-6 px-6 py-2 rounded-full" style={{ backgroundColor: '#5B3F95' }}>
-              <p className="text-white font-semibold text-lg">Sponsored by Spice Krewe</p>
-            </div>
-
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              The Ultimate
+              James and Keshia's Ultimate
               <span className="block" style={{ color: '#0088CE' }}>Crawfish Boil Experience</span>
             </h1>
 
@@ -35,13 +23,20 @@ export default function Hero() {
               <p className="text-lg md:text-xl text-gray-700 mb-4">
                 Attend an authentic crawfish boil; or if you're interested in hosting your own legendary backyard feast, check out our planning tools.
               </p>
-              <div className="space-y-2">
-                <p className="text-base font-semibold" style={{ color: '#5B3F95' }}>
-                  This boil is a demonstration by Spice Krewe
-                </p>
-                <p className="text-base font-semibold" style={{ color: '#0088CE' }}>
-                  Featuring an authentic Spice Krewe seasoning recipe
-                </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <img
+                  src="/SpiceKrewe_Logo_Transparent_background_(1).png"
+                  alt="Spice Krewe Logo"
+                  className="h-16 md:h-20 w-auto"
+                />
+                <div className="space-y-2 text-center sm:text-left">
+                  <p className="text-base font-semibold" style={{ color: '#5B3F95' }}>
+                    This boil is a demonstration by Spice Krewe
+                  </p>
+                  <p className="text-base font-semibold" style={{ color: '#0088CE' }}>
+                    Featuring an authentic Spice Krewe seasoning recipe
+                  </p>
+                </div>
               </div>
             </div>
 
