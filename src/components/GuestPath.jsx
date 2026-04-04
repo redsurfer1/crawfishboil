@@ -88,11 +88,8 @@ export default function GuestPath() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Attend a Boil
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-3">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Experience great food and even better company
-          </p>
-          <p className="text-lg font-semibold" style={{ color: '#0088CE' }}>
-            Featuring an authentic Spice Krewe seasoning recipe
           </p>
         </div>
 
