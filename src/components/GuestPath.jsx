@@ -73,7 +73,8 @@ export default function GuestPath() {
       alert('Please add at least one item before paying.');
       return;
     }
-    window.open('https://www.paypal.com/paypalme/yourpaypalaccount', '_blank', 'noopener,noreferrer');
+    const paypalUrl = `https://www.paypal.com/paypalme/JamesMemphis/${total}`;
+    window.open(paypalUrl, '_blank', 'noopener,noreferrer');
   };
 
   const handleVenmoPay = () => {
@@ -233,17 +234,31 @@ export default function GuestPath() {
               </div>
 
               <div className="space-y-3">
-                <button
-                  type="button"
-                  onClick={handlePayNow}
-                  disabled={calculateTotal() === 0}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-semibold text-lg transition transform hover:scale-105 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                  </svg>
-                  Pay Now with PayPal {calculateTotal() > 0 && `- $${calculateTotal()}`}
-                </button>
+                {calculateTotal() > 0 ? (
+                  <a
+                    href={`https://www.paypal.com/paypalme/JamesMemphis/${calculateTotal()}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-semibold text-lg transition transform hover:scale-105 flex items-center justify-center gap-2"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                    </svg>
+                    Pay Now with PayPal - ${calculateTotal()}
+                  </a>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={handlePayNow}
+                    disabled={true}
+                    className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold text-lg transition transform hover:scale-105 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                    </svg>
+                    Pay Now with PayPal
+                  </button>
+                )}
 
                 {calculateTotal() > 0 ? (
                   <a
