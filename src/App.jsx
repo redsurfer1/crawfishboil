@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import GuestPath from './components/GuestPath';
 import HostPath from './components/HostPath';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Hero />
         <GuestPath />
         <HostPath />
+        <Contact />
       </main>
       <Footer />
     </div>
