@@ -69,16 +69,21 @@ export default function GuestPath() {
 
   const handlePayNow = () => {
     const total = calculateTotal();
-    if (total > 0) {
-      window.open('https://www.paypal.com/paypalme/yourpaypalaccount', '_blank');
+    if (total === 0) {
+      alert('Please add at least one item before paying.');
+      return;
     }
+    window.open('https://www.paypal.com/paypalme/yourpaypalaccount', '_blank', 'noopener,noreferrer');
   };
 
   const handleVenmoPay = () => {
     const total = calculateTotal();
-    if (total > 0) {
-      window.open('https://venmo.com/u/yourvenmohandle', '_blank');
+    if (total === 0) {
+      alert('Please add at least one item before paying.');
+      return;
     }
+    const venmoUrl = `https://venmo.com/James-Williams-234?txn=pay&amount=${total}&note=Crawfish+Boil`;
+    window.open(venmoUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -240,20 +245,35 @@ export default function GuestPath() {
                   Pay Now with PayPal {calculateTotal() > 0 && `- $${calculateTotal()}`}
                 </button>
 
-                <button
-                  type="button"
-                  onClick={handleVenmoPay}
-                  disabled={calculateTotal() === 0}
-                  className="w-full text-white py-4 rounded-lg font-semibold text-lg transition transform hover:scale-105 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                  style={{ backgroundColor: '#3d95ce' }}
-                  onMouseEnter={(e) => e.target.style.backgroundColor = '#2d85be'}
-                  onMouseLeave={(e) => e.target.style.backgroundColor = '#3d95ce'}
-                >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19.5 4h-15C3.67 4 3 4.67 3 5.5v13c0 .83.67 1.5 1.5 1.5h15c.83 0 1.5-.67 1.5-1.5v-13c0-.83-.67-1.5-1.5-1.5zM12 16.5c-2.48 0-4.5-2.02-4.5-4.5s2.02-4.5 4.5-4.5 4.5 2.02 4.5 4.5-2.02 4.5-4.5 4.5zm0-7.5c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
-                  </svg>
-                  Pay with Venmo {calculateTotal() > 0 && `- $${calculateTotal()}`}
-                </button>
+                {calculateTotal() > 0 ? (
+                  <a
+                    href={`https://venmo.com/James-Williams-234?txn=pay&amount=${calculateTotal()}&note=Crawfish+Boil`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full text-white py-4 rounded-lg font-semibold text-lg transition transform hover:scale-105 flex items-center justify-center gap-2"
+                    style={{ backgroundColor: '#3d95ce' }}
+                    onMouseEnter={(e) => e.target.style.backgroundColor = '#2d85be'}
+                    onMouseLeave={(e) => e.target.style.backgroundColor = '#3d95ce'}
+                  >
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19.5 4h-15C3.67 4 3 4.67 3 5.5v13c0 .83.67 1.5 1.5 1.5h15c.83 0 1.5-.67 1.5-1.5v-13c0-.83-.67-1.5-1.5-1.5zM12 16.5c-2.48 0-4.5-2.02-4.5-4.5s2.02-4.5 4.5-4.5 4.5 2.02 4.5 4.5-2.02 4.5-4.5 4.5zm0-7.5c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                    </svg>
+                    Pay with Venmo - ${calculateTotal()}
+                  </a>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={handleVenmoPay}
+                    disabled={true}
+                    className="w-full text-white py-4 rounded-lg font-semibold text-lg transition transform hover:scale-105 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                    style={{ backgroundColor: '#3d95ce' }}
+                  >
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19.5 4h-15C3.67 4 3 4.67 3 5.5v13c0 .83.67 1.5 1.5 1.5h15c.83 0 1.5-.67 1.5-1.5v-13c0-.83-.67-1.5-1.5-1.5zM12 16.5c-2.48 0-4.5-2.02-4.5-4.5s2.02-4.5 4.5-4.5 4.5 2.02 4.5 4.5-2.02 4.5-4.5 4.5zm0-7.5c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                    </svg>
+                    Pay with Venmo
+                  </button>
+                )}
               </div>
             </div>
           </div>
