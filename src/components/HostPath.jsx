@@ -50,7 +50,7 @@ export default function HostPath() {
             <div className="text-4xl mb-4">👨‍🍳</div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">Perfect Ratios</h3>
             <p className="text-gray-600">
-              Time-tested Louisiana proportions for the perfect boil
+              Time-tested proportions for the perfect boil
             </p>
           </div>
         </div>
