@@ -210,8 +210,8 @@ ${calcMode === 'people' ? `For ${people} people` : `For ${crawfishPounds} lbs of
 
               <div className="flex items-center justify-between p-4 bg-red-50 rounded-lg">
                 <div className="flex items-center">
-                  <div className="w-8 h-8 mr-3 bg-red-50 rounded flex items-center justify-center">
-                    <img src="/sausage_link_1_4.5.26.jpeg" alt="Sausage" className="w-6 h-6 object-contain sausage-img" />
+                  <div className="w-8 h-8 mr-3 flex items-center justify-center text-2xl">
+                    🌭
                   </div>
                   <span className="font-semibold text-gray-900">Sausage</span>
                 </div>
