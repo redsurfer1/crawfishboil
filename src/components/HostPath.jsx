@@ -20,7 +20,6 @@ export default function HostPath() {
         <div className="flex justify-center mb-8">
           <a
             href="/CrawfishBoilUS-HowToBoil-Guide.pdf"
-            download="CrawfishBoilUS-HowToBoil-Guide.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition transform hover:scale-105"
