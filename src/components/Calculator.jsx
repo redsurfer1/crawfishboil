@@ -178,13 +178,13 @@ ${calcMode === 'people' ? `For ${people} people` : `For ${crawfishPounds} lbs of
             </div>
 
             <div className="grid md:grid-cols-2 gap-4">
-              <div className="flex items-center justify-between p-4 bg-red-50 rounded-lg">
+              <div className="flex items-center justify-between p-4 bg-green-50 rounded-lg">
                 <div className="flex items-center">
-                  <span className="text-2xl mr-3">🦞</span>
-                  <span className="font-semibold text-gray-900">Crawfish</span>
+                  <span className="text-2xl mr-3">🥬</span>
+                  <span className="font-semibold text-gray-900">Brussels Sprouts</span>
                 </div>
-                <span className="text-lg font-bold text-red-600">
-                  {results.crawfish.toFixed(1)} lbs
+                <span className="text-lg font-bold text-green-600">
+                  {results.brusselsSprouts.toFixed(2)} lbs
                 </span>
               </div>
 
@@ -211,7 +211,7 @@ ${calcMode === 'people' ? `For ${people} people` : `For ${crawfishPounds} lbs of
               <div className="flex items-center justify-between p-4 bg-red-50 rounded-lg">
                 <div className="flex items-center">
                   <div className="w-8 h-8 mr-3 flex items-center justify-center">
-                    <img src="/sausage_red50_bg.png" alt="Sausage" className="w-8 h-8 object-contain" />
+                    <img src="/sausage.jpeg" alt="Sausage" className="w-8 h-8 object-contain" />
                   </div>
                   <span className="font-semibold text-gray-900">Sausage</span>
                 </div>
@@ -240,13 +240,13 @@ ${calcMode === 'people' ? `For ${people} people` : `For ${crawfishPounds} lbs of
                 </span>
               </div>
 
-              <div className="flex items-center justify-between p-4 bg-green-50 rounded-lg md:col-span-2">
+              <div className="flex items-center justify-between p-4 bg-red-50 rounded-lg md:col-span-2">
                 <div className="flex items-center">
-                  <span className="text-2xl mr-3">🥬</span>
-                  <span className="font-semibold text-gray-900">Brussels Sprouts</span>
+                  <span className="text-2xl mr-3">🦞</span>
+                  <span className="font-semibold text-gray-900">Crawfish</span>
                 </div>
-                <span className="text-lg font-bold text-green-600">
-                  {results.brusselsSprouts.toFixed(2)} lbs
+                <span className="text-lg font-bold text-red-600">
+                  {results.crawfish.toFixed(1)} lbs
                 </span>
               </div>
             </div>
