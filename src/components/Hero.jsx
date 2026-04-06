@@ -31,7 +31,7 @@ export default function Hero() {
                 />
                 <div className="space-y-2 text-center sm:text-left">
                   <p className="text-base font-semibold" style={{ color: '#5B3F95' }}>
-                    This boil is a demonstration by Spice Krewe
+                    This boil is a demonstration by Spice Krewe's boil team: Andy, Gary, and James
                   </p>
                   <p className="text-base font-semibold" style={{ color: '#0088CE' }}>
                     Featuring an authentic Spice Krewe seasoning recipe
